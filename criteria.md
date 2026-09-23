@@ -55,41 +55,52 @@ in at least 4 of 5 tries.
 
 ---
 
-## 4. Something about your chunks
+## 4. Every chunk still names the thing it describes
 
-<!-- YOU WRITE THIS ONE.
-
-     How would you know if your chunks were the right size? Name something
-     countable or observable.
-
-     Examples of the right shape — don't copy these, they should come from
-     what you actually saw in Milestone 3:
-       - "At least 4 of 5 sampled chunks read as a complete thought, with no
-          sentence cut in half at either end."
-       - "No chunk is shorter than 200 characters, since anything below that
-          in my corpus turned out to be a heading with no content under it." -->
-
-
+All 35 chunks drawn from my housing and dining documents (7 buildings × 3 docs,
+7 halls × 2 docs) contain the building or hall name. Zero chunks that describe
+a specific building are anonymous.
 
 **Why this target:**
-
+<!-- My documents are 183 to 554 characters — every one of the
+88 fits inside a single 800-character chunk, so at the default settings
+chunking does nothing at all and overlap never fires. That makes "is a sentence
+cut in half" the wrong question for this corpus; nothing is cut. The real risk
+is the opposite one: if Milestone 3 leads me to chunk *smaller*, the longer
+housing documents split, and the building name lives only in the title line, so
+the second half becomes an orphan that reads "Machines take $1.50 wash, coin
+only" with nothing saying where. That matters more here than in most corpora
+because the seven `*_laundry.txt` documents are near-identical templates
+differing only in building name and price — an anonymous chunk is not merely
+less useful, it is indistinguishable from six wrong answers. 35 of 35 and not a
+sampled fraction, because one orphaned chunk is one building I can silently
+answer wrong. -->
 
 
 ---
 
-## 5. Your choice
+## 5. The source named is the *right* source
 
-<!-- YOU WRITE THIS ONE TOO.
-
-     Pick something you actually care about getting right. It could be about
-     speed, about refusals, about a particular kind of question your corpus
-     handles badly, about source attribution being correct rather than merely
-     present — anything, as long as it names a number or an observable
-     outcome. -->
-
-
+For all 5 of my test questions, the document the answer names is one that
+actually contains the answer. For the Old Brewhouse laundry question
+specifically, the named source is `housing_old_brewhouse_laundry.txt` and not
+any of the six other buildings' laundry documents.
 
 **Why this target:**
+<!-- Criterion 2 only asks that *a* source appears, and in this
+corpus that is close to free — every answer will cite something. It doesn't
+catch the failure I actually expect. The seven laundry documents differ by one
+building name and a price; the seven dining documents and their `Re:` followups
+are nearly as close. Retrieval landing one building off produces an answer that
+is fluent, confidently sourced, and wrong about how much I'll pay — and
+criterion 2 scores that as a pass. So the thing worth measuring is whether the
+citation is correct, not whether it exists.
+
+5 of 5 rather than 4 of 5, because I can't justify budgeting one wrong
+attribution. A refusal tells the user to go look it up; a wrong building told
+in a confident voice, with a filename attached, tells them not to bother. Those
+are not the same kind of miss, and the near-duplicate documents are exactly
+where the miss will come from if it comes at all. -->
 
 
 
